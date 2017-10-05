@@ -1,13 +1,13 @@
 body {
   font-family: Orbitron, sans-serif;
   text-align: center;
+  background-image: url('https://images4.alphacoders.com/667/667236.jpg');
 }
 
 table {
   font-size: 50px/50px;
   border-collapse: collapse;
   margin: 150px, 0px, 0px, 0px;
-  outline: black;
   margin: 0 auto;
 }
 
@@ -19,7 +19,6 @@ td {
   height: 200px;
   width: 200px;
   padding: 5px 5px 0;
-  border: 2px solid #989898;
   vertical-align: middle;
   text-align: center;
   font-size: 100px;
@@ -90,4 +89,18 @@ button{
 }
 #r3c3 {
   background-color: yellowgreen;
+}
+
+#message {
+  color: wheat;
+  font-size: 30px;
+  text-align: center;
+}
+
+.colorCell {
+border-radius: 100px;
+}
+
+.cell {
+border-radius: 100px;
 }
