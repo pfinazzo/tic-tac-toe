@@ -93,8 +93,9 @@ button{
 
 #message {
   color: wheat;
-  font-size: 30px;
+  font-size: 80px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .colorCell {
@@ -103,4 +104,7 @@ border-radius: 100px;
 
 .cell {
 border-radius: 100px;
+}
+span {
+  font-size: 30px;
 }
