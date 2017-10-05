@@ -40,7 +40,8 @@ $(function () {
   /*----- functions -----*/
   function init() {
     turn = player1;
-    board.textContent = [];
+    board = [null, null, null, null, null, null, null, null, null];
+    render();
   };
 
   function switchTurn() {
@@ -50,7 +51,13 @@ $(function () {
       turn = player1;
     }
   };
-  
+
+  function render() {
+    $('td').each(function(idx, elem) {
+        $(elem).text(board[idx])
+    })
+  }
+
 function checkForWinner() {
     const lines = [
       [0, 1, 2],
@@ -68,7 +75,6 @@ function checkForWinner() {
       var third = lines[idx][2];
       if (board[first] && board[first] === board[second] && board[first] === board[third]) {
         console.log('winner');
-        init();
       }
    });
   }
