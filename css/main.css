@@ -11,6 +11,10 @@ table {
   margin: 0 auto;
 }
 
+#restart {
+  font-family: Orbitron, sans-serif;
+}
+
 td {
   height: 200px;
   width: 200px;
@@ -27,3 +31,63 @@ button{
   margin-top: 20px;
 }
 
+.colorTable td {
+  height: 20px;
+  width: 400px;
+}
+.colorTable {
+  margin: 30px;
+}
+ 
+#colorSelector {
+  margin: 30px;
+}
+
+#r0c0 {
+  background-color: red;
+}
+#r0c1 {
+  background-color: blue;
+}
+#r0c2 {
+  background-color: green;
+}
+#r0c3 {
+  background-color: yellow;
+}
+#r1c0 {
+  background-color: aqua;
+}
+#r1c1 {
+  background-color: purple;
+}
+#r1c2 {
+  background-color: orange;
+}
+#r1c3 {
+  background-color: goldenrod;
+}
+#r2c0 {
+  background-color: blueviolet;
+}
+#r2c1 {
+  background-color: salmon;
+}
+#r2c2 {
+  background-color: saddlebrown;
+}
+#r2c3 {
+  background-color: springgreen;
+}
+#r3c0 {
+  background-color: navy;
+}
+#r3c1 {
+  background-color: darkcyan;
+}
+#r3c2 {
+  background-color: fuchsia;
+}
+#r3c3 {
+  background-color: yellowgreen;
+}

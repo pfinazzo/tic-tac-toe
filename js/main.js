@@ -2,10 +2,14 @@
 $(function () {
   var board = new Array(9).fill(null);
   var turn;
+  var player1color;
+  var player2color;
+  // declaring an array with 9 spots waiting to receive values
+  // declaring another (kind of but not technically "global") variable
 
   /*----- app's state (variables) -----*/
-  var player1 = "X";
-  var player2 = "O";
+  var player1 = ({"background-color": /*`${player1color}`*/ "blue"});
+  var player2 = ({"background-color": /*`${player2color}`*/ "yellow"});
 
   /*----- cached element references -----*/
   var cell0 = $('#0');
@@ -26,9 +30,9 @@ $(function () {
       return;
     }
     if (turn === player1) {
-      $(this).text('X');
+      $(this).css(player1);
     } else {
-      $(this).text('Y');
+      $(this).css(player2);
     }
     board[$(this).attr('id')] = turn;
     checkForWinner();
@@ -37,12 +41,15 @@ $(function () {
 
   $('#restart').on('click', init);
 
+  //$('#r0c0').on('click', selectColor)
   /*----- functions -----*/
   function init() {
     turn = player1;
     board = [null, null, null, null, null, null, null, null, null];
+    $('.cell').css({"background-color": "white"});
     render();
   };
+ 
 
   function switchTurn() {
     if (turn === player1) {
@@ -51,6 +58,12 @@ $(function () {
       turn = player1;
     }
   };
+  // function selectColor(event, color) {
+  //   player1color = $(event.target.idx).css({backgroundColor: color});
+  //   if (player1color === true) {
+  //     player2color = $(event.target.idx).css({backgroundColor: color});
+  //   }
+  // }
 
   function render() {
     $('td').each(function(idx, elem) {
@@ -74,7 +87,7 @@ function checkForWinner() {
       var second = lines[idx][1];
       var third = lines[idx][2];
       if (board[first] && board[first] === board[second] && board[first] === board[third]) {
-        console.log('winner');
+        alert('winner');
       }
    });
   }
