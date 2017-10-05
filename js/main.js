@@ -88,6 +88,7 @@ function checkForWinner() {
       var third = lines[idx][2];
       if (board[first] && board[first] === board[second] && board[first] === board[third]) {
         alert('winner');
+        init();
       }
    });
   }
