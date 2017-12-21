@@ -6,7 +6,7 @@ Tic-Tac-Toe is a game where each player is given a value. In this case the value
 # Technologies Used
 * HTML
 * CSS
-* Vanilla Javascript
+* Vanilla JavaScript
 
 # To play:
 1. Clone/download the zip
