@@ -28,12 +28,8 @@ $(function () {
     console.log($(this).text());
     if ($(this).text()) {
       return;
-    }
-    if (turn === player1) {
-      $(this).css(player1);
-    } else {
-      $(this).css(player2);
-    }
+    };
+    turn === player1 ? $(this).css(player1) : $(this).css(player2);
     board[$(this).attr('id')] = turn;
     checkForWinner();
     switchTurn();
@@ -41,7 +37,6 @@ $(function () {
 
   $('#restart').on('click', init);
 
-  //$('#r0c0').on('click', selectColor)
   /*----- functions -----*/
   function init() {
     turn = player1;
@@ -52,18 +47,8 @@ $(function () {
  
 
   function switchTurn() {
-    if (turn === player1) {
-      turn = player2;
-    } else {
-      turn = player1;
-    }
+    turn === player1 ? turn = player2 : turn = player1;
   };
-  // function selectColor(event, color) {
-  //   player1color = $(event.target.idx).css({backgroundColor: color});
-  //   if (player1color === true) {
-  //     player2color = $(event.target.idx).css({backgroundColor: color});
-  //   }
-  // }
 
   function render() {
     $('td').each(function(idx, elem) {
