@@ -1,4 +1,6 @@
 # Tic-Tac-Toe
+![Screenshot]([img]https://i.imgur.com/94whvqV.png[/img])
+
 Tic-Tac-Toe is a game where each player is given a value. In this case the values are colors. Each player must click on a cell in the grid to activate it and place their color on that cell. The strategy and objective of this game is to fill 3 cells of your own color in a complete row, column, or diagonal formation, all while trying to stop the other player from forming their complete formation of a row, column, or diagonal.
 
 # Technologies Used
