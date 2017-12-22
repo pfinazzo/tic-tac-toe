@@ -15,3 +15,6 @@ Tic-Tac-Toe is a game where each player is given a value. In this case the value
 
 # Icebox
 This game still needs implementation of the color picker. 
+
+# Deployed App
+[My App](https://pfinazzo.github.io/tic-tac-toe/)
