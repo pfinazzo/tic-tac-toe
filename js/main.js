@@ -9,7 +9,7 @@ $(function () {
 
   /*----- app's state (variables) -----*/
   var player1 = ({"background-color": /*`${player1color}`*/ "blue"});
-  var player2 = ({"background-color": /*`${player2color}`*/ "yellow"});
+  var player2 = ({"background-color": /*`${player2color}`*/ "green"});
 
   /*----- cached element references -----*/
   var cell0 = $('#0');
