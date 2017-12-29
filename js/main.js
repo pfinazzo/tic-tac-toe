@@ -25,10 +25,14 @@ $(function () {
 
   /*----- event listeners -----*/
   $('table').on('click', ".cell", function () {
-    console.log($(this).text());
     if ($(this).text()) {
       return;
     };
+    if ($(this).css(player1)) {
+      return;
+    } else if ($(this).css(player2)) {
+      return;
+    }
     turn === player1 ? $(this).css(player1) : $(this).css(player2);
     board[$(this).attr('id')] = turn;
     checkForWinner();
