@@ -12,15 +12,6 @@ $(function () {
   var player2 = ({"background-color": /*`${player2color}`*/ "green"});
 
   /*----- cached element references -----*/
-  var cell0 = $('#0');
-  var cell1 = $('#1');
-  var cell2 = $('#2');
-  var cell3 = $('#3');
-  var cell4 = $('#4');
-  var cell5 = $('#5');
-  var cell6 = $('#6');
-  var cell7 = $('#7');
-  var cell8 = $('#8');
   var resetButton = $('#restart');
 
   /*----- event listeners -----*/
@@ -28,12 +19,10 @@ $(function () {
     if ($(this).text()) {
       return;
     };
-    if ($(this).css(player1)) {
-      return;
-    } else if ($(this).css(player2)) {
+    if (board[this.id]) {
       return;
     }
-    turn === player1 ? $(this).css(player1) : $(this).css(player2);
+    turn === player1  && ($(this).css(player1) || $(this).css(player1)) ? $(this).css(player1) : $(this).css(player2);
     board[$(this).attr('id')] = turn;
     checkForWinner();
     switchTurn();
